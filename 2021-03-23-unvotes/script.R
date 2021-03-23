@@ -1,10 +1,6 @@
 library(tidyverse)
 library(rnaturalearth)
-library(patchwork)
-library(countrycode)
 library(tmap)
-library(grid)
-library(ggplotify)
 
 unvotes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-23/unvotes.csv')
 roll_calls <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-23/roll_calls.csv')
