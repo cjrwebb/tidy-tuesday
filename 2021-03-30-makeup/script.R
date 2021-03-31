@@ -45,16 +45,16 @@ pos_labs <- hexsums_long %>%
 hexsums_long %>%
   ggplot() +
   geom_waffle(aes(fill = hex, values = value), 
-              color = "white", size = 1.1, radius = unit(2, "pt"),
+              color = "white", size = 1.1, radius = unit(3, "pt"),
               flip = TRUE) +
   facet_wrap(~name, nrow = 3) +
   coord_equal() +
   scale_fill_identity() +
-  geom_text(data = pos_labs, aes(x = 0.5, y = pos_label+2.5, label = name), 
-            hjust = 0, family = "HelveticaNeueLight", colour = "black", size = 4) +
+  geom_text(data = pos_labs, aes(x = 0.56, y = pos_label+2.5, label = name), 
+            hjust = 0, family = "HelveticaNeue-Medium", colour = "black", size = 3.5) +
   theme_void() +
   ggtitle("Foundation shades for the 30 largest collection names") +
-  labs(caption = "Datavis by @cjrwebb. Data from ThePudding via #TidyTuesday.") +
+  labs(caption = "\nDatavis by @cjrwebb. Data from ThePudding via #TidyTuesday.") +
   theme(strip.text = element_blank(), plot.margin = unit(c(1,1,1,1), "in"), 
-        plot.title = element_text(family = "HelveticaNeue-Thin", size = 42),
+        plot.title = element_text(family = "HelveticaNeue-UltraLight", size = 42),
         plot.caption = element_text(family = "HelveticaNeueLight", size = 11)) 
